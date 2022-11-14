@@ -9,16 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    /*Мобильное меню*/
-    document.querySelector('.burger').addEventListener('click', () => {
-        let body = document.querySelector('body').classList.toggle('--is-visible')
-        disable();
-    })
-    document.querySelector('.close').addEventListener('click', () => {
-        let body = document.querySelector('body').classList.toggle('--is-visible')
-        enable()
-    })
-    /*Мобильное меню*/
 
 let styles = {
     "overflow": "hidden",
@@ -37,25 +27,5 @@ const enable = () => {
 }
 
 
-
-/*я тут перемудрил с версткой и задублировал скрипт, пришлось делать не универсальный скрипт открытия/закрытия меню - обычно я такое кастомное Г*** не делаю ) */
-
-document.querySelectorAll('.mob__title1').forEach(item => {
-    item.addEventListener('click', () => {
-        item.parentElement.classList.toggle('--is-menu1')
-        })
-    })
-
-document.querySelectorAll('.mob__title').forEach(item => {
-    item.addEventListener('click', () => {
-        const box = document.querySelector('.footer__section-products__box')
-        box.classList.toggle('--is-menu')
-    })
 })
 
-})
-
-
-let elem = document.querySelector('.elem')
-elem.addEventListener("click", false);
-elem.addEventListener("click", true);
