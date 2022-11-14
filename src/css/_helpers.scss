@@ -1,0 +1,83 @@
+/**
+	Глобальные переменные :root
+ */
+:root {
+  --swiper-theme-color: var(--color-main)
+}
+$params: (
+  container-min-width:350px,
+  container-max-width:1200px,
+  container-max-width-m:900px,
+  container-margin:0px auto,
+  container-padding:0 1em,
+  border-radius: 5px,
+  animation:200ms,
+);
+$headersSizes: (
+  h1: 35px,
+  h2: 29px,
+  h3: 24px,
+  h4: 20px,
+  h5: 18px,
+  h6: 16px,
+);
+$color: (
+  main: #003154,
+  gray-static: #8F9090,
+  black70: #404040,
+  gray20: #EAEAEA,
+  gray-blue5: #F7F7F8,
+  line-gray: #EAEAEA,
+  gray60: #888888,
+  ligth-blue: #F2F6FB,
+  gray30: #E1E1E1,
+  dark-blue: #174463,
+  c-white: #fff,
+);
+$font: (
+  family: "'Golos Text', serif",
+  size:15px,
+);
+$font-size-tags: (
+  body:var(--font-size),
+  p:1rem,
+);
+
+@each $tagName, $tagValue in $headersSizes {
+  #{$tagName}, .#{ $tagName}{
+    display: block;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    line-height: 1.1em;
+    font-size: #{$tagValue};
+    color: var(--color-main);
+    margin-bottom: 1rem;
+  }
+}
+
+:root {
+  @each $name, $value in $params {
+    --#{$name}: #{$value};
+  }
+  @each $name, $value in $font {
+    --font-#{$name}:  #{$value};
+  }
+  @each $name, $value in $font-size-tags {
+    --font-size-#{$name}:  #{$value};
+  }
+  @each $name, $c in $color {
+    --color-#{$name}: #{$c};
+  }
+}
+
+/*
+container - общий класс для центральной области
+*/
+.container {
+  max-width: var(--container-max-width);
+  min-width: var(--container-min-width);
+  margin: var(--container-margin);
+  padding: var(--container-padding);
+  box-sizing: border-box;
+}
