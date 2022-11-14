@@ -1,6 +1,6 @@
-# Creativeculrt-test
+# Medreclama
 
-## Тестовое задание для Creativeculrt
+## Тестовое задание для Medreclama
 
 ### start project
 
