@@ -1,12 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
 
 
-    var swiper = new Swiper(".main-slider", {
-        pagination: {
-            el: ".main-slider-pagination",
-            dynamicBullets: true,
+    let swiper = new Swiper(".mySwiper", {
+
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
         },
-    });
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
 
 
 
@@ -25,6 +29,8 @@ const enable = () => {
         document.body.style.removeProperty(key);
     })
 }
+
+$('input[data-type="PHONE"]').inputmask({'mask': '+7 (999) 999-99-99', showMaskOnHover: false});
 
 
 })

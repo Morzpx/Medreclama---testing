@@ -1,0 +1,51 @@
+.input {
+	--heigth: 40px;
+	--pl: 10px;
+	position: relative;
+    text-align: left;
+}
+.ui-input {
+	display: block;
+    width: 100%;
+    background: var(--color-c-white);
+    border: 1px solid var(--color-c-gray);
+    color: var(--color-c-black);
+    transition: border-color 200ms, box-shadow 200ms;
+    box-shadow: none;
+    border-radius: 5px;
+    height: var(--heigth);
+    margin-bottom: 1em;
+    -webkit-appearance: none;
+    appearance: none;
+	padding-left: var(--pl);
+	outline: none;
+}
+.ui-input::placeholder {
+	color: transparent;
+}
+.ui-input:focus {
+    border-color: var(--color-main);
+    box-shadow: 0 0 0 1px var(--color-main);
+    background: #fff;
+}
+.ui-label {
+	position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 100%;
+    height: var(--heigth);
+    padding: 0 1rem;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    color: var(--color-c-black);
+    font-size: 1em;
+    transition: 200ms;
+    white-space: nowrap;
+    transform-origin: 20px 0;
+}
+.ui-input:focus~.ui-label, .ui-input:not(:placeholder-shown)~.ui-label{
+	transform: scale(0.55) translate(calc(-1 * var(--pl)), -45px);
+    color: #8b8585;
+}

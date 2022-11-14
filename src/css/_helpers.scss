@@ -22,17 +22,11 @@ $headersSizes: (
   h6: 16px,
 );
 $color: (
-  main: #003154,
-  gray-static: #8F9090,
-  black70: #404040,
-  gray20: #EAEAEA,
-  gray-blue5: #F7F7F8,
-  line-gray: #EAEAEA,
-  gray60: #888888,
-  ligth-blue: #F2F6FB,
-  gray30: #E1E1E1,
-  dark-blue: #174463,
+  main: #0051D4,
   c-white: #fff,
+  c-black: #000,
+  c-gray: #edeff2,
+  c-hover: #0866ff,
 );
 $font: (
   family: "'Commissioner', serif",
@@ -51,7 +45,6 @@ $font-size-tags: (
     padding: 0;
     line-height: 1.1em;
     font-size: #{$tagValue};
-    color: var(--color-main);
     margin-bottom: 1rem;
   }
 }

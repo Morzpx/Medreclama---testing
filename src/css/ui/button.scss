@@ -19,7 +19,7 @@
   background: var(--color);
   font-size: 1em;
   padding: var(--padding-top-bottom) var(--padding-left-right);
-  border-radius: 2px;
+  border-radius: 5px;
   cursor: pointer;
   justify-content: center;
   align-items: center;
@@ -34,9 +34,9 @@
   }
 
   &:hover {
-    color: var(--border-color);
-    background: var(--c-white);
-    border: solid 1px var(--border-color);
+    color: var(--color-c-white);
+    background: var(--color-c-hover);
+    border: solid 1px var(--color-c-hover);
   }
 
   .icon {
