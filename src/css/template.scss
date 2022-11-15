@@ -5,6 +5,7 @@ $adaptive:(
         l:992px,
         m:768px,
         s:480px,
+        sx:375px,
         xs:320px,
 );
 @mixin size($breakpoint) {
@@ -24,9 +25,7 @@ $adaptive:(
 body {
   font: Commissioner, Arial, Helvetica, sans-serif;
 }
-img {
-  width: 100%;
-}
+
 .bg-gray-border {
   background: var(--color-c-gray);
   padding: 20px;
@@ -41,6 +40,14 @@ img {
   grid-template-columns: 240px repeat(2, 1fr);
   gap: 20px;
   margin-bottom: 40px;
+  @include size(m) {
+    grid-template-columns: 1fr;
+  }
+}
+.offer__sub {
+  @include size(m) {
+    margin-bottom: 20px;
+  }
 }
 .article__img {}
 .article__img img {}
@@ -55,8 +62,14 @@ img {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  @include size(m) {
+    grid-template-columns: 1fr;
+  }
 }
 .article__content-item {}
+.advantage {
+  margin-bottom: 20px;
+}
 .content-title {
 
 }
@@ -79,6 +92,9 @@ img {
 .offer__sub {
 
 }
+.article__img img {
+  width: 100%;
+}
 .offer__sub .date {
   font-weight: 600;
 }
@@ -93,6 +109,9 @@ img {
   border-top: var(--size) solid transparent;
   border-bottom: var(--size) solid transparent;
   border-left: calc(var(--size) + 5px) solid var(--color-c-gray);
+  @include size(s) {
+    display: none;
+  }
 }
 .reviews__item {
   text-decoration: underline;
@@ -107,4 +126,22 @@ img {
 .offer__form-sub {
   font-size: 14px;
   margin-bottom: 0.5em;
+}
+.specialist__slider {
+  max-width: 376px;
+  @include size(sx) {
+    max-width: 350px;
+  }
+  @include size(xs) {
+    max-width: 280px;
+  }
+}
+.slide {
+  max-height: 170px;
+  cursor: pointer;
+}
+
+
+[draggable] {
+  user-select: none;
 }
